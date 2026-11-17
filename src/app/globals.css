@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400;1,9..40,600&family=PT+Mono&display=swap');
+@import "tailwindcss";
+
+/* ─── DESIGN TOKENS ─────────────────────────────────────────────────────── */
+:root {
+  --font-display: 'Sora', 'DM Sans', Helvetica, Arial, sans-serif;
+  --font-body: 'DM Sans', Helvetica, Arial, sans-serif;
+  --font-mono: 'PT Mono', 'Courier New', monospace;
+
+  --color-charcoal: #1A1A1A;
+  --color-orange: #F5922E;
+  --color-orange-dark: #C46F15;
+  --color-orange-light: #FDF0E0;
+  --color-orange-subtle: rgba(245, 146, 46, 0.08);
+  --color-white: #FFFFFF;
+  --color-warm-dark: #454745;
+  --color-gray: #8A8A88;
+  --color-border: rgba(26, 26, 26, 0.12);
+
+  --radius-pill: 9999px;
+  --radius-card-sm: 16px;
+  --radius-card-md: 30px;
+  --radius-card-lg: 40px;
+
+  --elevation-1: rgba(26,26,26,0.12) 0px 0px 0px 1px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-feature-settings: "calt";
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: #fff;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fff; }
+::-webkit-scrollbar-thumb { background: rgba(26,26,26,0.15); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #F5922E; }
