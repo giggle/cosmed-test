@@ -31,13 +31,6 @@ const offices = [
   { city: "Enugu", role: "South-East", territory: "South-East Nigeria" },
 ];
 
-const territories = [
-  { state: "Abuja", rep: "FCT Representative" },
-  { state: "Jos", rep: "North-Central Representative" },
-  { state: "Lagos", rep: "South-West Representative" },
-  { state: "Kano", rep: "North-West Representative" },
-  { state: "Enugu", rep: "South-East Representative" },
-];
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", type: "hospital", subject: "direct", message: "" });
@@ -222,7 +215,7 @@ export default function ContactPage() {
               <motion.div variants={fadeRight}>
                 <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: 11, color: "#C46F15", letterSpacing: 2, textTransform: "uppercase", marginBottom: 16 }}>Our Offices</div>
                 <h2 style={{ fontFamily: "'Sora',sans-serif", fontWeight: 700, fontSize: "clamp(26px,3vw,40px)", lineHeight: 1.1, color: "#1A1A1A", margin: "0 0 28px" }}>Find Us</h2>
-                <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {offices.map(({ city, role, territory }) => (
                     <motion.div key={city} variants={fadeRight} style={{ background: "#FDF0E0", borderRadius: 6, padding: "20px 22px", transition: "transform 200ms, box-shadow 200ms" }}
                       onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(-2px)"; el.style.boxShadow = "0 8px 24px rgba(245,146,46,0.12)"; }}
@@ -234,20 +227,6 @@ export default function ContactPage() {
                       <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: 12, color: "#8A8A88" }}>Covers: {territory}</div>
                     </motion.div>
                   ))}
-                </div>
-              </motion.div>
-
-              {/* Territory reps */}
-              <motion.div variants={fadeRight} style={{ background: "#1A1A1A", borderRadius: 6, padding: 24 }}>
-                <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: 11, color: "#F5922E", letterSpacing: 1.5, textTransform: "uppercase", marginBottom: 14 }}>Territory Representatives</div>
-                {territories.map(({ state, rep }) => (
-                  <div key={state} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, fontSize: 13, color: "#fff" }}>{state}</div>
-                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 400, fontSize: 12, color: "rgba(255,255,255,0.45)" }}>{rep}</div>
-                  </div>
-                ))}
-                <div style={{ marginTop: 14, fontFamily: "'DM Sans',sans-serif", fontWeight: 400, fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
-                  All enquiries are routed to your nearest rep and receive a response within <strong style={{ color: "#fff" }}>one business day.</strong>
                 </div>
               </motion.div>
             </motion.div>
