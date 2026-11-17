@@ -15,6 +15,7 @@
 
 import puppeteer from "puppeteer";
 import { mkdir, writeFile, access } from "node:fs/promises";
+import { applyOverrides } from "./brochure-overrides.mjs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -200,7 +201,8 @@ async function main() {
       const page = await browser.newPage();
       await page.setViewport({ width: 1440, height: 900 });
       await page.goto(pathToFileURL(file).href, { waitUntil: "load" });
-      const data = await page.evaluate(extract);
+      // Site-specific removals (products not offered) live in brochure-overrides.mjs.
+      const data = applyOverrides(p.slug, await page.evaluate(extract));
 
       // Images: collect, re-encode, and rewrite references to public paths.
       const imgDir = path.join(IMG_DIR, p.category);

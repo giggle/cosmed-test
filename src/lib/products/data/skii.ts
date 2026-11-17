@@ -5,13 +5,13 @@ const page: ProductPage = {
   "slug": "skii",
   "category": "knee",
   "meta": {
-    "title": "SKII PS/PS+ High Flexion Total Knee System | COSMED Surgicals",
-    "description": "SKII PS/PS+ High Flexion Total Knee System from COSMED Surgicals: CoCrMo femoral condyle (9 sizes, L/R), PS and PS+ constrained UHMWPE bearings (10–16 mm) and CoCrMo tibial tray (7 sizes)."
+    "title": "SKII PS High Flexion Total Knee System | COSMED Surgicals",
+    "description": "SKII PS High Flexion Total Knee System from COSMED Surgicals: CoCrMo femoral condyle (9 sizes, L/R), PS UHMWPE bearing (10–16 mm) and CoCrMo tibial tray (7 sizes)."
   },
-  "crumb": "SKII PS/PS+ High Flexion Total Knee System",
+  "crumb": "SKII PS High Flexion Total Knee System",
   "tag": "Knee Implants",
-  "title": "SKII PS/PS+ *High Flexion* Total Knee System",
-  "lead": "A high flexion total knee replacement with a choice of PS or constrained PS+ tibial bearing, so the level of stability can be set during surgery. CoCrMo femoral condyle and tray, German UHMWPE bearings.",
+  "title": "SKII PS *High Flexion* Total Knee System",
+  "lead": "A posterior-stabilised high flexion total knee replacement. The PS tibial bearing allows natural rotation and locks to the tray with an anterior dovetail. CoCrMo femoral condyle and tray, German UHMWPE bearing.",
   "secondaryCta": {
     "label": "View components",
     "href": "#femoral-condyle"
@@ -19,7 +19,7 @@ const page: ProductPage = {
   "facts": [
     {
       "label": "Components",
-      "value": "4",
+      "value": "3",
       "big": true
     },
     {
@@ -48,10 +48,6 @@ const page: ProductPage = {
       "label": "Bearing PS"
     },
     {
-      "id": "tibial-bearing-ps-plus",
-      "label": "Bearing PS+"
-    },
-    {
       "id": "tibial-tray",
       "label": "Tibial Tray"
     },
@@ -65,7 +61,7 @@ const page: ProductPage = {
       "kind": "chain",
       "id": null,
       "title": "How the system fits together",
-      "intro": "Each knee uses one femoral condyle, one tibial tray and one of two bearings. Choose PS or PS+ for the stability needed, then the size that fits the tray.",
+      "intro": "Each knee uses one femoral condyle, one PS bearing and one tibial tray. Choose the size that fits the tray, then the bearing thickness.",
       "items": [
         {
           "k": "01 · CoCrMo",
@@ -74,53 +70,13 @@ const page: ProductPage = {
         },
         {
           "k": "02 · UHMWPE",
-          "title": "PS or PS+ bearing",
-          "body": "PS allows natural rotation; PS+ adds constraint. Both from 10 to 16 mm thick."
+          "title": "PS bearing",
+          "body": "No varus/valgus constraint, up to 15° rotation. 10 to 16 mm thick."
         },
         {
           "k": "03 · CoCrMo",
           "title": "Tibial tray",
-          "body": "The baseplate fixed to the shin bone. 7 sizes, accepts either bearing."
-        }
-      ]
-    },
-    {
-      "kind": "compare",
-      "id": "ps-vs-ps-plus",
-      "title": "PS or *PS+*?",
-      "intro": "The surgeon can choose the bearing during the operation to give each knee the right level of stability. Both fit the same femoral condyle and tibial tray.",
-      "cols": [
-        "PS bearing",
-        "PS+ bearing (constrained)"
-      ],
-      "rows": [
-        {
-          "label": "Varus/valgus",
-          "values": [
-            "No constraint",
-            "Restricted to 2°"
-          ]
-        },
-        {
-          "label": "Internal/external rotation",
-          "values": [
-            "Up to 15°",
-            "Limited to ±2°"
-          ]
-        },
-        {
-          "label": "Thicknesses",
-          "values": [
-            "10, 12, 14, 16 mm",
-            "10, 12, 14, 16 mm"
-          ]
-        },
-        {
-          "label": "Sizes and tray fit",
-          "values": [
-            "1#, 2#, 4#, 6#",
-            "1#, 2#, 4#, 6# (same as PS)"
-          ]
+          "body": "The baseplate fixed to the shin bone. 7 sizes."
         }
       ]
     },
@@ -143,12 +99,12 @@ const page: ProductPage = {
           "padded": true,
           "multiply": false
         },
-        "num": "01 / 04",
+        "num": "01 / 03",
         "name": "SKII™ Femoral Condyle (PS)",
-        "desc": "The posterior-stabilised femoral component of the SKII system. It works with either the PS or the PS+ tibial bearing, so the surgeon can decide on the level of constraint during the operation.",
+        "desc": "The posterior-stabilised femoral component of the SKII system, used with the SKII PS tibial bearing and tibial tray.",
         "feats": [
           "Posterior-stabilised (PS) design",
-          "Pairs with both PS and PS+ tibial bearings",
+          "Pairs with the SKII PS tibial bearing",
           "Nine sizes, each in left and right versions"
         ],
         "material": "CoCrMo (cobalt-chromium-molybdenum)",
@@ -303,130 +259,13 @@ const page: ProductPage = {
           "padded": true,
           "multiply": false
         },
-        "num": "02 / 04",
+        "num": "02 / 03",
         "name": "SKII™ Tibial Bearing (PS)",
-        "desc": "The standard posterior-stabilised insert. It places no varus/valgus constraint on the knee and allows up to 15° of internal/external rotation. An anterior dovetail locks it to the tibial tray to minimise micromotion.",
+        "desc": "The posterior-stabilised insert. It places no varus/valgus constraint on the knee and allows up to 15° of internal/external rotation. An anterior dovetail locks it to the tibial tray to minimise micromotion.",
         "feats": [
           "No varus/valgus constraint",
           "Allows up to 15° internal/external rotation",
           "Anterior dovetail design minimises micromotion against the tray",
-          "Four thicknesses per size: 10, 12, 14 and 16 mm"
-        ],
-        "material": "UHMWPE (ultra-high-molecular-weight polyethylene), made in Germany",
-        "enquireLabel": "Enquire about this component",
-        "spec": {
-          "caption": "Thickness 10, 12, 14 or 16 mm for every size. Material: Germany UHMWPE",
-          "head": [
-            [
-              {
-                "t": "Size",
-                "h": true
-              },
-              {
-                "t": "Fits tibial tray",
-                "h": true
-              },
-              {
-                "t": "A/P (mm)",
-                "h": true
-              },
-              {
-                "t": "M/L (mm)",
-                "h": true
-              }
-            ]
-          ],
-          "rows": [
-            [
-              {
-                "t": "1#",
-                "h": true
-              },
-              {
-                "t": "1#"
-              },
-              {
-                "t": "38"
-              },
-              {
-                "t": "59"
-              }
-            ],
-            [
-              {
-                "t": "2#",
-                "h": true
-              },
-              {
-                "t": "2# / 3#"
-              },
-              {
-                "t": "41 / 43"
-              },
-              {
-                "t": "63 / 67"
-              }
-            ],
-            [
-              {
-                "t": "4#",
-                "h": true
-              },
-              {
-                "t": "4# / 5#"
-              },
-              {
-                "t": "46 / 48"
-              },
-              {
-                "t": "71 / 75"
-              }
-            ],
-            [
-              {
-                "t": "6#",
-                "h": true
-              },
-              {
-                "t": "6# / 7#"
-              },
-              {
-                "t": "51 / 53"
-              },
-              {
-                "t": "79 / 83"
-              }
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "kind": "product",
-      "product": {
-        "id": "tibial-bearing-ps-plus",
-        "photo": {
-          "image": {
-            "src": "/products/knee/skii-tibial-bearing-ps-plus.webp",
-            "width": 474,
-            "height": 268
-          },
-          "alt": "SKII™ Tibial Bearing (PS PLUS Constrained)",
-          "badge": "Insert · PS+",
-          "bg": "rgb(253, 240, 224)",
-          "bordered": false,
-          "aspect": "4/3",
-          "fit": "contain",
-          "padded": true,
-          "multiply": false
-        },
-        "num": "03 / 04",
-        "name": "SKII™ Tibial Bearing (PS PLUS Constrained)",
-        "desc": "A more constrained insert for knees that need extra stability. It restricts varus/valgus deviation to 2° and internal/external rotation to ±2°, while using the same sizes and tray fit as the PS bearing.",
-        "feats": [
-          "Restricts varus/valgus deviation to 2°",
-          "Limits internal/external rotation to ±2°",
-          "Same sizes and tray compatibility as the PS bearing",
           "Four thicknesses per size: 10, 12, 14 and 16 mm"
         ],
         "material": "UHMWPE (ultra-high-molecular-weight polyethylene), made in Germany",
@@ -537,12 +376,12 @@ const page: ProductPage = {
           "padded": true,
           "multiply": false
         },
-        "num": "04 / 04",
+        "num": "03 / 03",
         "name": "SKII™ Tibial Tray",
-        "desc": "The metal baseplate fixed to the resected tibia, holding either bearing. A tapped bind hole in the tray helps reduce the risk of osteolysis caused by wear.",
+        "desc": "The metal baseplate fixed to the resected tibia, holding the PS bearing. A tapped bind hole in the tray helps reduce the risk of osteolysis caused by wear.",
         "feats": [
           "Tapped bind hole reduces the risk of wear-related osteolysis",
-          "Accepts both PS and PS+ bearings",
+          "Holds the PS bearing with an anterior dovetail lock",
           "Seven sizes, from 38 × 59 mm to 53 × 83 mm"
         ],
         "material": "CoCrMo (cobalt-chromium-molybdenum)",
@@ -661,8 +500,8 @@ const page: ProductPage = {
       "intro": "Design features that support stability, flexibility in theatre and long-term performance.",
       "items": [
         {
-          "title": "Intraoperative Flexibility",
-          "body": "The choice between a PS or PS+ tibial bearing lets the surgeon optimise stability. PS: no varus/valgus constraint, allows up to 15° internal/external rotation. PS+: restricts varus/valgus deviation to 2° and internal/external rotation to ±2°."
+          "title": "Natural Rotation",
+          "body": "The PS tibial bearing places no varus/valgus constraint on the knee and allows up to 15° internal/external rotation."
         },
         {
           "title": "Enhanced Stability",

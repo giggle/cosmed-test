@@ -6,12 +6,12 @@ const page: ProductPage = {
   "category": "hip",
   "meta": {
     "title": "Hip Implants | COSMED Surgicals",
-    "description": "Hip implants from COSMED Surgicals: acetabular cups and liners, cemented and uncemented femoral stems, bipolar implants, screws and accessories, supplied to hospitals across Nigeria."
+    "description": "Hip implants from COSMED Surgicals: acetabular cups and liners, cemented and uncemented femoral stems, screws and accessories, supplied to hospitals across Nigeria."
   },
   "crumb": "Hip",
   "tag": "Hip Implants",
   "title": "Hip *Replacement* Implants",
-  "lead": "Implants for total and partial hip replacement: acetabular cups and liners, cemented and uncemented femoral stems, bipolar implants and accessories, each with its full size range.",
+  "lead": "Implants for total hip replacement: acetabular cups and liners, cemented and uncemented femoral stems, screws and accessories, each with its full size range.",
   "secondaryCta": {
     "label": "View implants",
     "href": "#cups"
@@ -19,7 +19,7 @@ const page: ProductPage = {
   "facts": [
     {
       "label": "Implants",
-      "value": "17",
+      "value": "13",
       "big": true
     },
     {
@@ -52,10 +52,6 @@ const page: ProductPage = {
       "label": "Femoral stems"
     },
     {
-      "id": "bipolar",
-      "label": "Bipolar hemiarthroplasty"
-    },
-    {
       "id": "accessories",
       "label": "Screws and accessories"
     }
@@ -84,7 +80,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "01 / 17",
+          "num": "01 / 13",
           "name": "Titanium Porous Coated Acetabular Cup",
           "desc": "An uncemented titanium acetabular shell with a porous-coated outer surface. It takes a separate polyethylene liner.",
           "feats": [
@@ -210,7 +206,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "02 / 17",
+          "num": "02 / 13",
           "name": "Uncemented Acetabular HA Coated Cup",
           "desc": "An uncemented titanium acetabular shell with a hydroxyapatite (HA) coating on the outer surface. It takes a separate polyethylene liner.",
           "feats": [
@@ -336,7 +332,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "03 / 17",
+          "num": "03 / 13",
           "name": "Titanium 3D Printed Acetabular Cup",
           "desc": "A 3D printed titanium acetabular shell with a porous lattice structure on its outer surface.",
           "feats": [
@@ -462,7 +458,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "04 / 17",
+          "num": "04 / 13",
           "name": "Dual Mobility Cup",
           "desc": "A titanium dual mobility cup, in which a mobile polyethylene insert moves inside the metal shell and the femoral head moves inside the insert.",
           "feats": [
@@ -579,7 +575,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "05 / 17",
+          "num": "05 / 13",
           "name": "Cemented Acetabular Cup",
           "desc": "An all-polyethylene acetabular cup for cemented fixation.",
           "feats": [
@@ -713,7 +709,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "06 / 17",
+          "num": "06 / 13",
           "name": "Acetabular Cup Liner (0°)",
           "desc": "A neutral (0°) polyethylene liner that fits inside the acetabular cup and articulates with the femoral head.",
           "feats": [
@@ -839,7 +835,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "07 / 17",
+          "num": "07 / 13",
           "name": "Acetabular Cup Liner (10°)",
           "desc": "A 10° polyethylene liner, in the same sizes and head combinations as the 0° liner.",
           "feats": [
@@ -973,7 +969,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "08 / 17",
+          "num": "08 / 13",
           "name": "Cemented Stem (Polished)",
           "desc": "A polished femoral stem for cemented fixation.",
           "feats": [
@@ -1146,7 +1142,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "09 / 17",
+          "num": "09 / 13",
           "name": "Uncemented Stem (HA Coated)",
           "desc": "An uncemented femoral stem with a titanium and hydroxyapatite (HA) coating.",
           "feats": [
@@ -1319,7 +1315,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "10 / 17",
+          "num": "10 / 13",
           "name": "Uncemented Porous Coated Stem",
           "desc": "An uncemented femoral stem with a porous-coated surface.",
           "feats": [
@@ -1479,518 +1475,6 @@ const page: ProductPage = {
     },
     {
       "kind": "group",
-      "id": "bipolar",
-      "title": "Bipolar hemiarthroplasty",
-      "intro": "Fixed bipolar implants, plus a modular bipolar cup and inner heads for use with the femoral stems above.",
-      "products": [
-        {
-          "id": "fenestrated-fix-bipolar",
-          "photo": {
-            "image": {
-              "src": "/products/hip/hip-fenestrated-fix-bipolar.webp",
-              "width": 795,
-              "height": 1100
-            },
-            "alt": "Fenestrated Fix Bipolar",
-            "badge": "Fixed",
-            "bg": "rgb(236, 235, 233)",
-            "bordered": false,
-            "aspect": "1/1",
-            "fit": "contain",
-            "padded": false,
-            "multiply": false
-          },
-          "num": "11 / 17",
-          "name": "Fenestrated Fix Bipolar",
-          "desc": "A one-piece bipolar implant for hemiarthroplasty, with the stem and bipolar head supplied as a single unit. The stem is fenestrated (has openings through it).",
-          "feats": [
-            "One-piece fixed bipolar design",
-            "Fenestrated stem",
-            "Ten sizes, 37 to 55"
-          ],
-          "material": "SS316L stainless steel",
-          "enquireLabel": "Enquire about this implant",
-          "spec": {
-            "caption": "10 sizes. Material: SS316L",
-            "head": [
-              [
-                {
-                  "t": "Size",
-                  "h": true
-                }
-              ]
-            ],
-            "rows": [
-              [
-                {
-                  "t": "37",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "39",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "41",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "43",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "45",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "47",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "49",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "51",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "53",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "55",
-                  "h": true
-                }
-              ]
-            ]
-          }
-        },
-        {
-          "id": "non-fenestrated-fix-bipolar",
-          "photo": {
-            "image": {
-              "src": "/products/hip/hip-non-fenestrated-fix-bipolar.webp",
-              "width": 787,
-              "height": 1100
-            },
-            "alt": "Non-Fenestrated Fix Bipolar",
-            "badge": "Fixed",
-            "bg": "rgb(236, 235, 233)",
-            "bordered": false,
-            "aspect": "1/1",
-            "fit": "contain",
-            "padded": false,
-            "multiply": false
-          },
-          "num": "12 / 17",
-          "name": "Non-Fenestrated Fix Bipolar",
-          "desc": "The same one-piece fixed bipolar design with a solid, non-fenestrated stem.",
-          "feats": [
-            "One-piece fixed bipolar design",
-            "Solid (non-fenestrated) stem",
-            "Ten sizes, 37 to 55"
-          ],
-          "material": "SS316L stainless steel",
-          "enquireLabel": "Enquire about this implant",
-          "spec": {
-            "caption": "10 sizes. Material: SS316L",
-            "head": [
-              [
-                {
-                  "t": "Size",
-                  "h": true
-                }
-              ]
-            ],
-            "rows": [
-              [
-                {
-                  "t": "37",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "39",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "41",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "43",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "45",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "47",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "49",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "51",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "53",
-                  "h": true
-                }
-              ],
-              [
-                {
-                  "t": "55",
-                  "h": true
-                }
-              ]
-            ]
-          }
-        },
-        {
-          "id": "modular-bipolar-cup",
-          "photo": {
-            "image": {
-              "src": "/products/hip/hip-modular-bipolar-cup-ring.webp",
-              "width": 1000,
-              "height": 741
-            },
-            "alt": "Modular Bipolar Cup with Ring",
-            "badge": "Modular",
-            "bg": "rgb(236, 236, 236)",
-            "bordered": false,
-            "aspect": "4/3",
-            "fit": "cover",
-            "padded": false,
-            "multiply": false
-          },
-          "num": "13 / 17",
-          "name": "Modular Bipolar Cup with Ring",
-          "desc": "A modular bipolar cup with a retaining ring, used with an inner head on a separate femoral stem.",
-          "feats": [
-            "Modular bipolar cup with retaining ring",
-            "Sixteen sizes, Ø38 to Ø53 mm in 1 mm steps",
-            "Ø28 mm inner head in every size"
-          ],
-          "material": "SS316L / SS316LVM",
-          "enquireLabel": "Enquire about this implant",
-          "spec": {
-            "caption": "Modular Cup With Ring, 16 sizes. Material: SS316L / SS316LVM",
-            "head": [
-              [
-                {
-                  "t": "Outer diameter",
-                  "h": true
-                },
-                {
-                  "t": "Inner head",
-                  "h": true
-                }
-              ]
-            ],
-            "rows": [
-              [
-                {
-                  "t": "Ø 38 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 39 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 40 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 41 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 42 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 43 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 44 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 45 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 46 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 47 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 48 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 49 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 50 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 51 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 52 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ],
-              [
-                {
-                  "t": "Ø 53 mm",
-                  "h": true
-                },
-                {
-                  "t": "Ø 28 mm"
-                }
-              ]
-            ]
-          }
-        },
-        {
-          "id": "inner-head",
-          "photo": {
-            "image": {
-              "src": "/products/hip/hip-inner-head.webp",
-              "width": 900,
-              "height": 900
-            },
-            "alt": "Inner Head (Polished)",
-            "badge": "Modular",
-            "bg": "rgb(236, 236, 236)",
-            "bordered": false,
-            "aspect": "1/1",
-            "fit": "cover",
-            "padded": false,
-            "multiply": false
-          },
-          "num": "14 / 17",
-          "name": "Inner Head (Polished)",
-          "desc": "A polished modular femoral head that fits the 12/14 taper of the stems, in four neck-length options.",
-          "feats": [
-            "Four neck-length options: −3.5, 0.0, +3.5 and +7.0",
-            "12/14 taper",
-            "Listed materials: SS316L, SS316LVM, CoCr and ceramic"
-          ],
-          "material": "SS316L, SS316LVM, CoCr or ceramic",
-          "enquireLabel": "Enquire about this implant",
-          "spec": {
-            "caption": "4 sizes, 12/14 taper",
-            "head": [
-              [
-                {
-                  "t": "Size",
-                  "h": true
-                },
-                {
-                  "t": "Offset",
-                  "h": true
-                },
-                {
-                  "t": "Taper",
-                  "h": true
-                },
-                {
-                  "t": "Material (as listed)",
-                  "h": true
-                }
-              ]
-            ],
-            "rows": [
-              [
-                {
-                  "t": "Small",
-                  "h": true
-                },
-                {
-                  "t": "−3.5"
-                },
-                {
-                  "t": "12/14"
-                },
-                {
-                  "t": "SS316L"
-                }
-              ],
-              [
-                {
-                  "t": "Medium",
-                  "h": true
-                },
-                {
-                  "t": "0.0"
-                },
-                {
-                  "t": "12/14"
-                },
-                {
-                  "t": "SS316LVM"
-                }
-              ],
-              [
-                {
-                  "t": "Large",
-                  "h": true
-                },
-                {
-                  "t": "+3.5"
-                },
-                {
-                  "t": "12/14"
-                },
-                {
-                  "t": "CoCr"
-                }
-              ],
-              [
-                {
-                  "t": "Extra Large",
-                  "h": true
-                },
-                {
-                  "t": "+7.0"
-                },
-                {
-                  "t": "12/14"
-                },
-                {
-                  "t": "Ceramic"
-                }
-              ]
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "kind": "group",
       "id": "accessories",
       "title": "Screws and accessories",
       "intro": "Fixation screws for the acetabular cups and accessories for cemented stems.",
@@ -2012,7 +1496,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "15 / 17",
+          "num": "11 / 13",
           "name": "Hexagonal Screw",
           "desc": "A Ø6.5 mm titanium screw with a hexagonal drive.",
           "feats": [
@@ -2094,7 +1578,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "16 / 17",
+          "num": "12 / 13",
           "name": "Centralizer",
           "desc": "A stem centralizer used with cemented femoral stems.",
           "feats": [
@@ -2122,7 +1606,7 @@ const page: ProductPage = {
             "padded": false,
             "multiply": false
           },
-          "num": "17 / 17",
+          "num": "13 / 13",
           "name": "Cement Retractor",
           "desc": "An accessory used during cementing of the femoral stem.",
           "feats": [

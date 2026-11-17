@@ -18,7 +18,7 @@ export type { ProductPage } from "./types";
 /** Knee systems, in the order shown in the "Knee systems" switcher. */
 export const kneeSystems = [
   { slug: "ski", label: "SKI", summary: "Primary PS high flexion total knee", page: ski },
-  { slug: "skii", label: "SKII", summary: "Primary high flexion knee with PS or constrained PS+ bearing", page: skii },
+  { slug: "skii", label: "SKII", summary: "Primary PS high flexion knee with dovetail-locking bearing", page: skii },
   { slug: "hrsk", label: "HRSK", summary: "Rotating hinge revision knee", page: hrsk },
   { slug: "rsk", label: "RSK", summary: "Hybrid revision knee with stems, augments and cones", page: rsk },
 ] as const;
@@ -64,7 +64,7 @@ export const categories: CategoryCard[] = [
   },
   {
     id: "hip", label: "Hip Implants", href: "/products/hip",
-    blurb: "Acetabular cups and liners, cemented and uncemented stems, bipolar implants and accessories.",
+    blurb: "Acetabular cups and liners, cemented and uncemented stems, screws and accessories.",
     image: "/products/hip/hip-dual-mobility-cup.webp",
     items: hip.chips.map((c) => ({ label: c.label, href: `/products/hip#${c.id}` })),
   },
