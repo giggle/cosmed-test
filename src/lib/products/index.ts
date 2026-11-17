@@ -98,7 +98,7 @@ export const categories: CategoryCard[] = [
   },
   {
     id: "consumables", label: "Consumables", href: "/products/consumables",
-    blurb: "Bone cement with or without gentamicin, hydrocephalus shunts, sterile surgical drapes, and gowns.",
+    blurb: "Bone cement with or without gentamicin, hydrocephalus shunts, sterile surgical drapes, and reinforced surgical gowns.",
     image: "/products/consumables/cement-gentamicin.webp",
     items: consumables.chips.map((c) => ({ label: c.label, href: `/products/consumables#${c.id}` })),
   },

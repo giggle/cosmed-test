@@ -5,7 +5,7 @@
 // Images: public/products/consumables/*.webp (re-encoded from the supplier photos; the shunt
 // photo was extracted from the PDF and colour-inverted to undo its CMYK encoding).
 // Left out on purpose: the "Surgical Instrument Wrap" (no specifications and a mismatched photo),
-// and duplicate gown listings that share a model number or have no distinguishing specifications.
+// and all gowns except the reinforced surgical gowns (not offered).
 import type { CatalogItem, Product, ProductPage, SpecCell } from "../types";
 
 const h = (t: string): SpecCell => ({ t, h: true });
@@ -166,42 +166,29 @@ const specialityDrapes = [
 const surgicalGowns = [
   item("gown-reinforced-wraparound", "Reinforced Wraparound Surgical Gown", "AAMI 2–3", [["Model", "SGRW-100"], ["Protection", "AAMI Level 2 or 3, fully impervious"], ["Fabric", "SMMMS, reinforced front and arms"], ["Sizes", "S, M, L"]]),
   item("gown-reinforced-wraparound-breathable", "Reinforced Wraparound Surgeon Gown", "AAMI 2–4", [["Model", "SGRB-100"], ["Protection", "AAMI Level 2 to 4, fully impervious"], ["Fabric", "SMMMS with breathable reinforcement"], ["Sizes", "S, M, L, XL"]]),
-  item("gown-wraparound", "Wraparound Surgical Gown", null, [["Model", "SGW-100"], ["Sizes", "S to XXXL"], ["Sterility", "Sterile"]]),
-  item("gown-ultrasonic", "Ultrasonic-Stitched Surgical Gown", "AAMI 2–3", [["Model", "SG 100"], ["Protection", "AAMI Level 2 or 3"], ["Fabric", "SMS, soft SMS, microfibre or spunlace"], ["Sizes", "S, M, L"]]),
-  item("gown-level-3", "Level 3 Surgical Gown", "AAMI 3", [["Model", "SGS-100"], ["Protection", "AAMI Level 3"], ["Options", "Can be customised to specification"]]),
   item("gown-reinforced", "Reinforced Surgical Gown", "AAMI 2–3", [["Protection", "AAMI Level 2 or 3, fully impervious"], ["Fabric", "SMMMS"], ["Sizes", "S, M, L"]]),
-  item("gown-disposable", "Standard Surgical Gown", null, [["Protection", "AAMI Level 2 or 3"], ["Fabric", "SMMMS"], ["Sizes", "S, M, L"]]),
-  item("gown-laminated", "Laminated Gown", "Non-sterile", [["Model", "SGL-100"], ["Protection", "AAMI Level 2"], ["Fabric", "Laminated"], ["Size", "L"]]),
-];
-
-const otherWear = [
-  item("gown-isolation", "Isolation Gown", null, [["Use", "Isolation and infection control"]]),
-  item("gown-visitor", "Visitor Gown", null, [["Fabric", "Non-woven"], ["Colour", "Blue or white"]]),
-  item("gown-patient", "Disposable Patient Gown", null, [["Material", "Polyethylene"], ["Protection", "Water and blood resistant"], ["Size", "Free size, non-sterile"]]),
-  item("gown-patient-examination", "Patient Examination Gown", "Reusable", [["Use", "Examination, IV, general"], ["Sleeves", "Short, half or sleeveless"], ["Closure", "Front or back"]]),
-  item("apron-medical", "Disposable Medical Apron", null, [["Material", "Polyethylene"], ["Protection", "Water and blood resistant"], ["Size", "Free size, non-sterile"]]),
 ];
 
 const DRAPES = orthoDrapes.length + specialityDrapes.length;
-const GOWNS = surgicalGowns.length + otherWear.length;
+const GOWNS = surgicalGowns.length;
 
 const page: ProductPage = {
   slug: "consumables",
   category: "consumables",
   meta: {
     title: "Consumables | COSMED Surgicals",
-    description: "Theatre consumables from COSMED Surgicals: standard-viscosity bone cement with or without gentamicin, the Chhabra hydrocephalus shunt system, sterile SMMMS surgical drapes for orthopaedic and speciality procedures, and surgical, patient and visitor gowns. Supplied across Nigeria.",
+    description: "Theatre consumables from COSMED Surgicals: standard-viscosity bone cement with or without gentamicin, the Chhabra hydrocephalus shunt system, sterile SMMMS surgical drapes for orthopaedic and speciality procedures, and reinforced surgical gowns. Supplied across Nigeria.",
   },
   crumb: "Consumables",
   tag: "Consumables",
   title: "Theatre *Consumables*",
-  lead: "Bone cement, hydrocephalus shunts, sterile surgical drapes and protective gowns for the operating theatre and ward.",
+  lead: "Bone cement, hydrocephalus shunts, sterile surgical drapes and reinforced surgical gowns for the operating theatre.",
   secondaryCta: { label: "View range", href: "#cement" },
   facts: [
     { label: "Bone cements", value: "2", big: true },
     { label: "Shunt models", value: "9", big: false },
     { label: "Surgical drapes", value: String(DRAPES), big: false },
-    { label: "Gowns & aprons", value: String(GOWNS), big: false },
+    { label: "Surgical gowns", value: String(GOWNS), big: false },
   ],
   chips: [
     { id: "cement", label: "Bone cement" },
@@ -255,16 +242,9 @@ const page: ProductPage = {
     {
       kind: "catalog",
       id: "gowns",
-      title: "Surgical gowns",
-      intro: "Sterile, single-use gowns for the surgical team, in protection levels from AAMI Level 2 to Level 4.",
+      title: "Reinforced surgical gowns",
+      intro: "Sterile, single-use gowns for the surgical team, fully impervious with SMMMS reinforcement, from AAMI Level 2 to Level 4.",
       items: surgicalGowns,
-    },
-    {
-      kind: "catalog",
-      id: null,
-      title: "Patient & visitor wear",
-      intro: "Gowns and aprons for isolation rooms, wards, examinations and visitors.",
-      items: otherWear,
     },
     {
       kind: "benefits",
@@ -274,7 +254,7 @@ const page: ProductPage = {
       items: [
         { title: "SMMMS non-woven", body: "Five bonded layers, spunbond outside and three meltblown layers inside, giving a fluid barrier that stays breathable." },
         { title: "AAMI protection levels", body: "AAMI PB70 rates barrier performance from Level 1 to 4. Level 3 and 4 gowns suit procedures with heavy fluid exposure." },
-        { title: "Sterile, single use", body: "Drapes and surgical gowns are EO sterilized and individually packed, unless marked non-sterile." },
+        { title: "Sterile, single use", body: "Drapes and surgical gowns are EO sterilized and individually packed." },
       ],
     },
   ],
