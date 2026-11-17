@@ -30,6 +30,8 @@ const ROUTES = [
   { path: "/products/hip", name: "products-hip" },
   { path: "/products/spine", name: "products-spine" },
   { path: "/products/trauma", name: "products-trauma" },
+  { path: "/products/instruments", name: "products-instruments" },
+  { path: "/products/consumables", name: "products-consumables" },
   { path: "/products/arthroscopy", name: "products-arthroscopy" },
   { path: "/products/arthroscopy/knee", name: "products-arthroscopy-knee" },
   { path: "/products/arthroscopy/shoulder", name: "products-arthroscopy-shoulder" },

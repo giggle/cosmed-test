@@ -103,7 +103,7 @@ function SpecCellView({ cell, head }: Readonly<{ cell: SpecCell; head: boolean }
 function SpecListView({ spec }: Readonly<{ spec: NonNullable<Product["spec"]> }>) {
   return (
     <div className="lg:col-span-2" style={{ border: `1px solid ${C.line}`, borderRadius: 18, padding: "26px 28px 22px", minWidth: 0 }}>
-      <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 20, color: C.ink, marginBottom: 4 }}>Available options</h3>
+      <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 20, color: C.ink, marginBottom: 4 }}>{spec.title ?? "Available options"}</h3>
       <p style={{ color: C.muted, fontSize: 14, fontFamily: body, marginBottom: 18 }}>{spec.caption}</p>
       {spec.list!.map((g, i) => (
         <div key={g.title ?? i} style={{ marginTop: i ? 22 : 0 }}>
@@ -123,7 +123,7 @@ function SpecTableView({ spec }: Readonly<{ spec: NonNullable<Product["spec"]> }
   if (spec.list) return <SpecListView spec={spec} />;
   return (
     <div className="lg:col-span-2" style={{ border: `1px solid ${C.line}`, borderRadius: 18, padding: "26px 28px 22px", minWidth: 0 }}>
-      <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 20, color: C.ink, marginBottom: 4 }}>Specification</h3>
+      <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 20, color: C.ink, marginBottom: 4 }}>{spec.title ?? "Specification"}</h3>
       <div style={{ overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", minWidth: spec.head[0]?.length > 2 ? 480 : 0 }}>
           <caption style={{ textAlign: "left", color: C.muted, fontSize: 14, padding: "0 0 18px", fontFamily: body }}>{spec.caption}</caption>
@@ -179,6 +179,9 @@ function ProductSection({ product: p, first }: Readonly<{ product: Product; firs
         <p style={{ fontFamily: mono, fontSize: 13, color: C.accentDk, marginBottom: 14 }}>{p.num}</p>
         <h2 style={{ fontFamily: display, fontWeight: 800, fontSize: "clamp(28px,3.2vw,40px)", lineHeight: 1.08, letterSpacing: "-0.03em", color: C.ink, marginBottom: 16 }}>{p.name}</h2>
         <p style={{ color: C.ink2, fontSize: 16, lineHeight: 1.65, marginBottom: 24 }}>{p.desc}</p>
+        {p.featsTitle && p.feats.length > 0 && (
+          <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 16, color: C.ink, marginBottom: 12 }}>{p.featsTitle}</h3>
+        )}
         <PlusList items={p.feats} />
         {p.material && (
           <p style={{ fontSize: 15, marginBottom: 28, color: C.ink, lineHeight: 1.6 }}>
@@ -272,6 +275,37 @@ function BlockView({ block }: Readonly<{ block: Block }>) {
               </tbody>
             </table>
           </motion.div>
+        </section>
+      );
+
+    case "catalog":
+      return (
+        <section id={block.id ?? undefined} className="pt-16! lg:pt-24!" style={{ scrollMarginTop: 140 }}>
+          <SecHead title={block.title} intro={block.intro} />
+          <motion.ul variants={stagger08} initial="hidden" whileInView="visible" viewport={viewport} className="grid gap-5" style={{ listStyle: "none", gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))" }}>
+            {block.items.map((it) => (
+              <motion.li key={it.id} id={it.id} variants={fadeUpSm} style={{ ...cardStyle, overflow: "hidden", display: "flex", flexDirection: "column", scrollMarginTop: 140 }}>
+                <div style={{ position: "relative", aspectRatio: "4/3", background: "#fff", borderBottom: `1px solid ${C.line}` }}>
+                  {it.badge && (
+                    <span style={{ position: "absolute", top: 12, left: 12, zIndex: 2, background: C.peach, color: C.accentDk, fontFamily: body, fontSize: 11.5, fontWeight: 600, padding: "4px 10px", borderRadius: 6 }}>{it.badge}</span>
+                  )}
+                  {it.image && <Image src={it.image.src} alt={it.name} fill sizes="(min-width: 1024px) 300px, (min-width: 640px) 45vw, 100vw" style={{ objectFit: "cover" }} />}
+                </div>
+                <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", flex: 1 }}>
+                  <h3 style={{ fontFamily: display, fontWeight: 700, fontSize: 17.5, lineHeight: 1.25, color: C.ink, marginBottom: 12, letterSpacing: "-0.01em" }}>{it.name}</h3>
+                  <dl style={{ display: "grid", gridTemplateColumns: "auto 1fr", columnGap: 14, rowGap: 6, fontSize: 13.5, lineHeight: 1.45, marginBottom: 16 }}>
+                    {it.specs.map((s) => (
+                      <Fragment key={s.label}>
+                        <dt style={{ color: C.muted }}>{s.label}</dt>
+                        <dd style={{ color: C.ink, margin: 0 }}>{s.value}</dd>
+                      </Fragment>
+                    ))}
+                  </dl>
+                  <a href={`mailto:${ENQUIRY_EMAIL}?subject=${encodeURIComponent(`Enquiry: ${it.name}`)}`} style={{ marginTop: "auto", color: C.accentDk, fontWeight: 600, fontSize: 14, textDecoration: "none" }}>Enquire →</a>
+                </div>
+              </motion.li>
+            ))}
+          </motion.ul>
         </section>
       );
 

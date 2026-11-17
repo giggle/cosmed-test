@@ -10,6 +10,8 @@ import trauma from "./data/trauma";
 import arthroKnee from "./data/arthroscopy-knee";
 import arthroShoulder from "./data/arthroscopy-shoulder";
 import arthroFibers from "./data/arthroscopy-fibers-tapes";
+import instruments from "./data/instruments";
+import consumables from "./data/consumables";
 
 export type { ProductPage } from "./types";
 
@@ -24,6 +26,8 @@ export const kneeSystems = [
 export const hipPage = hip;
 export const spinePage = spine;
 export const traumaPage = trauma;
+export const instrumentsPage = instruments;
+export const consumablesPage = consumables;
 
 /** Arthroscopy areas, in the order shown in the "Arthroscopy" switcher. */
 export const arthroscopyAreas = [
@@ -86,8 +90,18 @@ export const categories: CategoryCard[] = [
       { label: "Fibers & Tapes", href: "/products/arthroscopy/fibers-tapes" },
     ],
   },
-  { id: "instruments", label: "Surgical Instruments", href: null, image: null, items: [], blurb: "Instrument sets and power tools for arthroplasty and trauma surgery." },
-  { id: "consumables", label: "Consumables", href: null, image: null, items: [], blurb: "Bone cement, drapes and procedure packs for the operating theatre." },
+  {
+    id: "instruments", label: "Surgical Instruments", href: "/products/instruments",
+    blurb: "The DK-N-MS high-speed power system for neurosurgery, with burs, shaver and saw blades, and craniotome cutters.",
+    image: "/products/instruments/instruments-dk-n-ms.webp",
+    items: instruments.chips.map((c) => ({ label: c.label, href: `/products/instruments#${c.id}` })),
+  },
+  {
+    id: "consumables", label: "Consumables", href: "/products/consumables",
+    blurb: "Bone cement with or without gentamicin, hydrocephalus shunts, sterile surgical drapes, and gowns.",
+    image: "/products/consumables/cement-gentamicin.webp",
+    items: consumables.chips.map((c) => ({ label: c.label, href: `/products/consumables#${c.id}` })),
+  },
 ];
 
 /** Page metadata from the brochure page's own <title> and description. */

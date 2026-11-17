@@ -14,6 +14,8 @@ export type SpecCell = {
 };
 
 export type SpecTable = {
+  /** Panel heading; defaults to "Specification" (table) or "Available options" (list). */
+  title?: string;
   caption: string;
   head: SpecCell[][];
   rows: SpecCell[][];
@@ -40,12 +42,24 @@ export type Product = {
   name: string;
   desc: string;
   feats: string[];
+  /** Optional heading shown above `feats`. */
+  featsTitle?: string;
   material: string;
   enquireLabel: string;
   spec: SpecTable | null;
 };
 
+/** Compact catalogue tile (used for large ranges such as drapes and gowns). */
+export type CatalogItem = {
+  id: string;
+  name: string;
+  image: PublicImage | null;
+  badge: string | null;
+  specs: { label: string; value: string }[];
+};
+
 export type Block =
+  | { kind: "catalog"; id: string | null; title: string; intro: string; items: CatalogItem[] }
   | { kind: "group"; id: string; title: string; intro: string; products: Product[] }
   | { kind: "product"; product: Product }
   | { kind: "chain"; id: string | null; title: string; intro: string; items: { k: string; title: string; body: string }[] }

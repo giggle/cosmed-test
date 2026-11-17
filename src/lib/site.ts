@@ -42,6 +42,8 @@ export const routes = [
   { path: "/products/hip", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/products/spine", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/products/trauma", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/products/instruments", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/products/consumables", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/products/arthroscopy", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/products/arthroscopy/knee", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/products/arthroscopy/shoulder", changeFrequency: "monthly" as const, priority: 0.8 },
