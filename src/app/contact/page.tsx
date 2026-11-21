@@ -31,6 +31,7 @@ const offices = [
   { city: "Enugu", role: "South-East", territory: "South-East Nigeria" },
 ];
 
+const SALES_EMAIL = "sales@cosmedsurgicals.com";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", type: "hospital", subject: "direct", message: "" });
@@ -47,10 +48,27 @@ export default function ContactPage() {
     return e;
   };
 
+  // No backend: submitting opens the visitor's email app with the enquiry addressed to sales.
+  const buildMailto = () => {
+    const typeLabel = customerTypes.find((c) => c.value === form.type)?.label ?? form.type;
+    const subjectLabel = subjects.find((s) => s.value === form.subject)?.label ?? form.subject;
+    const details = [
+      `Name: ${form.name}`,
+      form.company.trim() ? `Hospital / Company: ${form.company}` : null,
+      `I am a: ${typeLabel}`,
+      `Email: ${form.email}`,
+      `Phone: ${form.phone}`,
+      `Enquiry: ${subjectLabel}`,
+    ].filter(Boolean);
+    const body = `${details.join("\n")}\n\n${form.message}`;
+    return `mailto:${SALES_EMAIL}?subject=${encodeURIComponent(`Website enquiry: ${subjectLabel} — ${form.name}`)}&body=${encodeURIComponent(body)}`;
+  };
+
   const handleSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
     ev.preventDefault();
     const e = validate();
     if (Object.keys(e).length) { setErrors(e); return; }
+    window.location.href = buildMailto();
     setSubmitted(true);
   };
 
@@ -111,9 +129,13 @@ export default function ContactPage() {
                     style={{ background: "#FDF0E0", borderRadius: 8, padding: "48px 40px", textAlign: "center" }}
                   >
                     <div style={{ width: 56, height: 56, borderRadius: "50%", background: "#F5922E", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", fontFamily: "'Sora',sans-serif", fontWeight: 800, fontSize: 22, color: "#fff" }}>✓</div>
-                    <div style={{ fontFamily: "'Sora',sans-serif", fontWeight: 700, fontSize: 26, color: "#1A1A1A", marginBottom: 12 }}>Message Received</div>
+                    <div style={{ fontFamily: "'Sora',sans-serif", fontWeight: 700, fontSize: 26, color: "#1A1A1A", marginBottom: 12 }}>One last step</div>
                     <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 400, fontSize: 15, color: "#454745", lineHeight: 1.6 }}>
-                      Thank you, <strong>{form.name}</strong>. A COSMED territory representative will contact you at <strong>{form.email || form.phone}</strong> within one business day.
+                      Thank you, <strong>{form.name}</strong>. Your email app should have opened with your message to <strong>{SALES_EMAIL}</strong> — please press <strong>Send</strong> there. A COSMED territory representative will then contact you within one business day.
+                    </div>
+                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 400, fontSize: 14, color: "#454745", lineHeight: 1.6, marginTop: 16 }}>
+                      Nothing opened? <a href={buildMailto()} style={{ color: "#C46F15", fontWeight: 600 }}>Try again</a> or email us directly at{" "}
+                      <a href={`mailto:${SALES_EMAIL}`} style={{ color: "#C46F15", fontWeight: 600 }}>{SALES_EMAIL}</a>.
                     </div>
                   </motion.div>
                 ) : (
@@ -200,6 +222,9 @@ export default function ContactPage() {
                       onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.transform = "scale(1)"; el.style.boxShadow = "none"; }}>
                       Send Message →
                     </button>
+                    <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: 13, color: "#8A8A88", textAlign: "center", marginTop: 10 }}>
+                      Opens your email app with your message addressed to {SALES_EMAIL}.
+                    </p>
                   </motion.form>
                 )}
               </AnimatePresence>
